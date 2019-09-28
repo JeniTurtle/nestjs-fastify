@@ -1,0 +1,91 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "dom",
+      "es2018"
+    ],
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "target": "es2017",
+    "charset": "utf8",
+    "allowJs": false,
+    "pretty": true,
+    "noEmitOnError": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "strictPropertyInitialization": false,
+    "noFallthroughCasesInSwitch": true,
+    "skipDefaultLibCheck": true,
+    "importHelpers": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": [
+        "./src/*"
+      ],
+      "@config/*": [
+        "./src/config/*"
+      ],
+      "@config": [
+        "./src/config/main.config.ts"
+      ],
+      "@interfaces/*": [
+        "./src/interfaces/*"
+      ],
+      "@filters/*": [
+        "./src/filters/*"
+      ],
+      "@processors/*": [
+        "./src/processors/*"
+      ],
+      "@modules/*": [
+        "./src/modules/*"
+      ],
+      "@interceptors/*": [
+        "./src/interceptors/*"
+      ],
+      "@exceptions/*": [
+        "./src/exceptions/*"
+      ],
+      "@constants/*": [
+        "./src/constants/*"
+      ],
+      "@pipes/*": [
+        "./src/pipes/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@transforms/*": [
+        "./src/transforms/*"
+      ],
+      "@decorators/*": [
+        "./src/decorators/*"
+      ],
+      "@middlewares/*": [
+        "./src/middlewares/*"
+      ],
+      "@models/*": [
+        "./src/models/*"
+      ]
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ]
+}

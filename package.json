@@ -1,0 +1,95 @@
+{
+  "name": "nest-fastify",
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "format": "prettier --write 'src/**/*.{ts,json,yml,yaml}'",
+    "start": "ts-node -r tsconfig-paths/register src/server.ts",
+    "start:dev": "npm run format && concurrently --handle-input \"wait-on dist/server.js && nodemon\" \"tsc -w -p tsconfig.build.json\" ",
+    "prestart:prod": "rimraf dist && npm run build",
+    "start:prod": "node dist/server.js",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "dependencies": {
+    "@nestjs/common": "^6.0.0",
+    "@nestjs/core": "^6.0.0",
+    "@nestjs/platform-fastify": "^6.0.0",
+    "@nestjs/swagger": "^3.1.0",
+    "@nestjs/typeorm": "^6.0.0",
+    "@types/extend": "^3.0.1",
+    "@types/lodash": "^4.14.138",
+    "cache-manager": "^2.10.0",
+    "cache-manager-redis-store": "^1.5.0",
+    "class-transformer": "^0.2.2",
+    "class-validator": "^0.9.1",
+    "crypto-js": "^3.1.9-1",
+    "extend": "^3.0.2",
+    "fastify-compress": "^0.11.0",
+    "fastify-helmet": "^3.0.1",
+    "fastify-rate-limit": "^2.3.0",
+    "fastify-swagger": "^2.4.0",
+    "lodash": "^4.17.15",
+    "mssql": "^5.1.0",
+    "mysql": "2.17.1",
+    "nest-winston": "^1.1.2",
+    "node-rsa": "^1.0.6",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.5.2",
+    "typeorm": "^0.2.17",
+    "winston": "^3.2.1",
+    "winston-daily-rotate-file": "^4.1.0"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^6.7.2",
+    "@types/faker": "latest",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "@types/pino": "latest",
+    "@types/supertest": "latest",
+    "concurrently": "^4.1.1",
+    "faker": "latest",
+    "husky": "latest",
+    "jest": "latest",
+    "nodemon": "latest",
+    "pino-pretty": "latest",
+    "prettier": "latest",
+    "pretty-quick": "latest",
+    "rimraf": "^2.6.3",
+    "supertest": "latest",
+    "ts-jest": "latest",
+    "ts-node": "latest",
+    "tsconfig-paths": "latest",
+    "tslint": "latest",
+    "tslint-config-prettier": "latest",
+    "typescript": "^3.5.0",
+    "wait-on": "^3.2.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
+}

@@ -37,7 +37,7 @@
     "fastify-helmet": "^3.0.1",
     "fastify-rate-limit": "^2.3.0",
     "fastify-swagger": "^2.4.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mssql": "^5.1.0",
     "mysql": "2.17.1",
     "nest-winston": "^1.1.2",

@@ -29,7 +29,7 @@
     "@types/lodash": "^4.14.138",
     "cache-manager": "^2.10.0",
     "cache-manager-redis-store": "^1.5.0",
-    "class-transformer": "^0.2.2",
+    "class-transformer": "^0.3.1",
     "class-validator": "^0.9.1",
     "crypto-js": "^3.1.9-1",
     "extend": "^3.0.2",
